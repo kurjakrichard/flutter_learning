@@ -1,0 +1,115 @@
+{
+  "@@locale": "hu",
+
+  "appTitle": "Flutter tanulás",
+  "menuTitle": "Flutter tanulás menü",
+  "home": "Kezdőlap",
+  "settings": "Beállítások",
+  "language": "Nyelv",
+  "languageSystem": "Rendszer nyelve",
+  "languageHungarian": "Magyar",
+  "languageEnglish": "English",
+
+  "save": "Mentés",
+  "cancel": "Mégse",
+  "delete": "Törlés",
+  "title": "Cím",
+  "description": "Leírás",
+  "date": "Dátum",
+  "status": "Állapot",
+  "errorMessage": "Hiba: {error}",
+  "@errorMessage": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+
+  "categories": "Kategóriák",
+  "newCategory": "Új kategória",
+  "editCategory": "Kategória szerkesztése",
+  "category": "Kategória",
+  "categoryHint": "Írj be egy kategóriát",
+  "descriptionHint": "Írj be egy leírást",
+
+  "todoListEmpty": "A lista üres",
+  "addTodo": "Új teendő",
+  "insert": "Hozzáadás",
+
+  "quizTitle": "Első program",
+  "quizFinished": "Vége a kérdéseknek!",
+  "quizQuestionWho": "Ki vagy?",
+  "quizQuestionWhere": "Hol vagy?",
+  "quizQuestionBorn": "Hol születtél?",
+  "quizAnswerPooh": "Micimackó",
+  "quizAnswerSnowWhite": "Hófehérke",
+  "quizAnswerPapaSmurf": "Törpapa",
+  "quizAnswerHome": "otthon",
+  "quizAnswerShop": "boltban",
+  "quizAnswerWork": "munkahelyen",
+  "quizAnswerBalaton": "Balaton",
+
+  "button": "Gomb",
+  "goodFlight": "Jó utat!",
+  "landscape": "Tájkép",
+  "beautiful": "Gyönyörű",
+  "sampleText": "szöveg",
+  "listItem": "Elem {index}",
+  "@listItem": {
+    "placeholders": {
+      "index": {"type": "int"}
+    }
+  },
+  "snackbarText": "Ez egy snackbar",
+  "statefulExample": "Állapotkezelő példa",
+  "bestCity": "A kedvenc városod: {city}",
+  "@bestCity": {
+    "placeholders": {
+      "city": {"type": "String"}
+    }
+  },
+  "bestCountry": "A kedvenc országod: {country}",
+  "@bestCountry": {
+    "placeholders": {
+      "country": {"type": "String"}
+    }
+  },
+
+  "currencyForint": "Forint",
+  "currencyDollar": "Dollár",
+  "currencyEuro": "Euró",
+  "currencyOther": "Egyéb",
+
+  "interestCalculator": "Kamatkalkulátor",
+  "investment": "Befektetés",
+  "investmentHint": "Add meg a befektetés összegét, pl.: 1.000.000",
+  "interestRate": "Kamatráta",
+  "interestRateHint": "%-ban",
+  "period": "Időszak",
+  "periodHint": "Időszak években",
+  "calculate": "Számol",
+  "reset": "Nulláz",
+  "enterNumber": "Kérlek, számot adj meg!",
+  "interestResult": "{term} év múlva a befektetésed értéke {amount} {currency} lesz.",
+  "@interestResult": {
+    "placeholders": {
+      "term": {"type": "String"},
+      "amount": {"type": "String"},
+      "currency": {"type": "String"}
+    }
+  },
+
+  "notes": "Jegyzetek",
+  "addNote": "Új jegyzet",
+  "editNote": "Jegyzet szerkesztése",
+  "priorityHigh": "Magas",
+  "priorityLow": "Alacsony",
+  "noteSaved": "A jegyzet mentve",
+  "noteSaveError": "Hiba történt a jegyzet mentésekor",
+  "noteDeleted": "A jegyzet törölve",
+  "noteDeleteError": "Hiba történt a jegyzet törlésekor",
+  "noNoteDeleted": "Nem történt törlés",
+  "discardChangesTitle": "Biztos kilépsz?",
+  "discardChangesMessage": "A nem mentett módosítások elvesznek.",
+  "yes": "Igen",
+  "no": "Nem"
+}

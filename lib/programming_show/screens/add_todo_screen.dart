@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:programming_show/model/todo.dart';
-import 'package:programming_show/provider/todo_provider.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_learning/l10n/app_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_learning/programming_show/model/todo.dart';
+import 'package:flutter_learning/programming_show/provider/todo_provider.dart';
 
-class AddTodoScreen extends StatefulWidget {
+class AddTodoScreen extends ConsumerStatefulWidget {
   const AddTodoScreen({super.key});
 
   @override
-  State<AddTodoScreen> createState() => _AddTodoScreenState();
+  ConsumerState<AddTodoScreen> createState() => _AddTodoScreenState();
 }
 
-class _AddTodoScreenState extends State<AddTodoScreen> {
+class _AddTodoScreenState extends ConsumerState<AddTodoScreen> {
   final TextEditingController _titleController = TextEditingController();
   final TextEditingController _descriptionController = TextEditingController();
   final TextEditingController _dateController = TextEditingController();
@@ -25,28 +26,27 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add Todo'),
+        title: Text(l10n.addTodo),
       ),
       body: ListView(
         children: [
-          textController('Title', _titleController),
-          textController('Description', _descriptionController),
-          textController('Date', _dateController),
+          textController(l10n.title, _titleController),
+          textController(l10n.description, _descriptionController),
+          textController(l10n.date, _dateController),
           ElevatedButton(
               onPressed: () {
                 Todo todo = Todo(
                     title: _titleController.text,
                     description: _descriptionController.text,
                     date: _dateController.text);
-                Provider.of<TodoProvider>(context, listen: false)
-                    .insertTodo(todo);
-                //context.read<TodoProvider>().insertTodo(todo);
+                ref.read(todoProvider.notifier).insertTodo(todo);
                 clerControllers();
                 Navigator.pop(context);
               },
-              child: const Text('Insert'))
+              child: Text(l10n.insert))
         ],
       ),
     );
