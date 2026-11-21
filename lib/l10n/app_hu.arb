@@ -1,15 +1,15 @@
 {
   "@@locale": "hu",
-
   "appTitle": "Flutter tanulás",
   "menuTitle": "Flutter tanulás menü",
   "home": "Kezdőlap",
+  "mainMenu": "Főmenü",
+  "todos": "Teendők",
   "settings": "Beállítások",
   "language": "Nyelv",
   "languageSystem": "Rendszer nyelve",
   "languageHungarian": "Magyar",
   "languageEnglish": "English",
-
   "save": "Mentés",
   "cancel": "Mégse",
   "delete": "Törlés",
@@ -17,24 +17,58 @@
   "description": "Leírás",
   "date": "Dátum",
   "status": "Állapot",
-  "errorMessage": "Hiba: {error}",
-  "@errorMessage": {
-    "placeholders": {
-      "error": {"type": "String"}
-    }
-  },
-
   "categories": "Kategóriák",
   "newCategory": "Új kategória",
   "editCategory": "Kategória szerkesztése",
   "category": "Kategória",
   "categoryHint": "Írj be egy kategóriát",
+  "categoryRequired": "A kategória neve nem lehet üres",
+  "categorySaved": "A kategória mentése sikerült",
+  "categorySaveError": "Hiba történt a kategória mentésekor",
+  "categoryDeleted": "A kategória törölve",
+  "categoryDeleteError": "Hiba történt a kategória törlésekor",
+  "deleteCategoryTitle": "Biztos törlöd?",
+  "deleteCategoryMessage": "A(z) „{name}” kategória törlődik.",
+  "@deleteCategoryMessage": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "undo": "Visszavonás",
+  "categoryRestored": "A kategória visszaállítva",
+  "categoryRestoreError": "Hiba történt a kategória visszaállításakor",
   "descriptionHint": "Írj be egy leírást",
-
+  "titleHint": "Írj be egy címet",
+  "dateHint": "Válassz egy dátumot",
+  "selectCategory": "Válassz kategóriát",
+  "noCategories": "Még nincs kategória, előbb vegyél fel egyet",
+  "categoryNotSelected": "Válassz egy kategóriát",
+  "titleRequired": "A cím nem lehet üres",
+  "todoSaved": "A teendő mentése sikerült",
+  "todoSaveError": "Hiba történt a teendő mentésekor",
+  "newTodo": "Új teendő",
+  "editTodo": "Teendő szerkesztése",
+  "filterByCategory": "Szűrés kategóriára",
+  "allCategories": "Összes kategória",
+  "noTodosInCategory": "Ebben a kategóriában nincs teendő",
+  "deleteTodoTitle": "Biztos törlöd?",
+  "deleteTodoMessage": "A(z) „{title}” teendő törlődik.",
+  "@deleteTodoMessage": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "todoDeleted": "A teendő törölve",
+  "todoDeleteError": "Hiba történt a teendő törlésekor",
+  "todoRestored": "A teendő visszaállítva",
+  "todoRestoreError": "Hiba történt a teendő visszaállításakor",
+  "todoUpdateError": "Hiba történt a teendő módosításakor",
   "todoListEmpty": "A lista üres",
-  "addTodo": "Új teendő",
-  "insert": "Hozzáadás",
-
+  "loadError": "Hiba történt a betöltéskor",
   "quizTitle": "Első program",
   "quizFinished": "Vége a kérdéseknek!",
   "quizQuestionWho": "Ki vagy?",
@@ -47,7 +81,6 @@
   "quizAnswerShop": "boltban",
   "quizAnswerWork": "munkahelyen",
   "quizAnswerBalaton": "Balaton",
-
   "button": "Gomb",
   "goodFlight": "Jó utat!",
   "landscape": "Tájkép",
@@ -56,7 +89,9 @@
   "listItem": "Elem {index}",
   "@listItem": {
     "placeholders": {
-      "index": {"type": "int"}
+      "index": {
+        "type": "int"
+      }
     }
   },
   "snackbarText": "Ez egy snackbar",
@@ -64,21 +99,23 @@
   "bestCity": "A kedvenc városod: {city}",
   "@bestCity": {
     "placeholders": {
-      "city": {"type": "String"}
+      "city": {
+        "type": "String"
+      }
     }
   },
   "bestCountry": "A kedvenc országod: {country}",
   "@bestCountry": {
     "placeholders": {
-      "country": {"type": "String"}
+      "country": {
+        "type": "String"
+      }
     }
   },
-
   "currencyForint": "Forint",
   "currencyDollar": "Dollár",
   "currencyEuro": "Euró",
   "currencyOther": "Egyéb",
-
   "interestCalculator": "Kamatkalkulátor",
   "investment": "Befektetés",
   "investmentHint": "Add meg a befektetés összegét, pl.: 1.000.000",
@@ -92,12 +129,17 @@
   "interestResult": "{term} év múlva a befektetésed értéke {amount} {currency} lesz.",
   "@interestResult": {
     "placeholders": {
-      "term": {"type": "String"},
-      "amount": {"type": "String"},
-      "currency": {"type": "String"}
+      "term": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "currency": {
+        "type": "String"
+      }
     }
   },
-
   "notes": "Jegyzetek",
   "addNote": "Új jegyzet",
   "editNote": "Jegyzet szerkesztése",

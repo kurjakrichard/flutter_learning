@@ -116,6 +116,18 @@ abstract class AppLocalizations {
   /// **'Kezdőlap'**
   String get home;
 
+  /// No description provided for @mainMenu.
+  ///
+  /// In hu, this message translates to:
+  /// **'Főmenü'**
+  String get mainMenu;
+
+  /// No description provided for @todos.
+  ///
+  /// In hu, this message translates to:
+  /// **'Teendők'**
+  String get todos;
+
   /// No description provided for @settings.
   ///
   /// In hu, this message translates to:
@@ -188,12 +200,6 @@ abstract class AppLocalizations {
   /// **'Állapot'**
   String get status;
 
-  /// No description provided for @errorMessage.
-  ///
-  /// In hu, this message translates to:
-  /// **'Hiba: {error}'**
-  String errorMessage(String error);
-
   /// No description provided for @categories.
   ///
   /// In hu, this message translates to:
@@ -224,11 +230,191 @@ abstract class AppLocalizations {
   /// **'Írj be egy kategóriát'**
   String get categoryHint;
 
+  /// No description provided for @categoryRequired.
+  ///
+  /// In hu, this message translates to:
+  /// **'A kategória neve nem lehet üres'**
+  String get categoryRequired;
+
+  /// No description provided for @categorySaved.
+  ///
+  /// In hu, this message translates to:
+  /// **'A kategória mentése sikerült'**
+  String get categorySaved;
+
+  /// No description provided for @categorySaveError.
+  ///
+  /// In hu, this message translates to:
+  /// **'Hiba történt a kategória mentésekor'**
+  String get categorySaveError;
+
+  /// No description provided for @categoryDeleted.
+  ///
+  /// In hu, this message translates to:
+  /// **'A kategória törölve'**
+  String get categoryDeleted;
+
+  /// No description provided for @categoryDeleteError.
+  ///
+  /// In hu, this message translates to:
+  /// **'Hiba történt a kategória törlésekor'**
+  String get categoryDeleteError;
+
+  /// No description provided for @deleteCategoryTitle.
+  ///
+  /// In hu, this message translates to:
+  /// **'Biztos törlöd?'**
+  String get deleteCategoryTitle;
+
+  /// No description provided for @deleteCategoryMessage.
+  ///
+  /// In hu, this message translates to:
+  /// **'A(z) „{name}” kategória törlődik.'**
+  String deleteCategoryMessage(String name);
+
+  /// No description provided for @undo.
+  ///
+  /// In hu, this message translates to:
+  /// **'Visszavonás'**
+  String get undo;
+
+  /// No description provided for @categoryRestored.
+  ///
+  /// In hu, this message translates to:
+  /// **'A kategória visszaállítva'**
+  String get categoryRestored;
+
+  /// No description provided for @categoryRestoreError.
+  ///
+  /// In hu, this message translates to:
+  /// **'Hiba történt a kategória visszaállításakor'**
+  String get categoryRestoreError;
+
   /// No description provided for @descriptionHint.
   ///
   /// In hu, this message translates to:
   /// **'Írj be egy leírást'**
   String get descriptionHint;
+
+  /// No description provided for @titleHint.
+  ///
+  /// In hu, this message translates to:
+  /// **'Írj be egy címet'**
+  String get titleHint;
+
+  /// No description provided for @dateHint.
+  ///
+  /// In hu, this message translates to:
+  /// **'Válassz egy dátumot'**
+  String get dateHint;
+
+  /// No description provided for @selectCategory.
+  ///
+  /// In hu, this message translates to:
+  /// **'Válassz kategóriát'**
+  String get selectCategory;
+
+  /// No description provided for @noCategories.
+  ///
+  /// In hu, this message translates to:
+  /// **'Még nincs kategória, előbb vegyél fel egyet'**
+  String get noCategories;
+
+  /// No description provided for @categoryNotSelected.
+  ///
+  /// In hu, this message translates to:
+  /// **'Válassz egy kategóriát'**
+  String get categoryNotSelected;
+
+  /// No description provided for @titleRequired.
+  ///
+  /// In hu, this message translates to:
+  /// **'A cím nem lehet üres'**
+  String get titleRequired;
+
+  /// No description provided for @todoSaved.
+  ///
+  /// In hu, this message translates to:
+  /// **'A teendő mentése sikerült'**
+  String get todoSaved;
+
+  /// No description provided for @todoSaveError.
+  ///
+  /// In hu, this message translates to:
+  /// **'Hiba történt a teendő mentésekor'**
+  String get todoSaveError;
+
+  /// No description provided for @newTodo.
+  ///
+  /// In hu, this message translates to:
+  /// **'Új teendő'**
+  String get newTodo;
+
+  /// No description provided for @editTodo.
+  ///
+  /// In hu, this message translates to:
+  /// **'Teendő szerkesztése'**
+  String get editTodo;
+
+  /// No description provided for @filterByCategory.
+  ///
+  /// In hu, this message translates to:
+  /// **'Szűrés kategóriára'**
+  String get filterByCategory;
+
+  /// No description provided for @allCategories.
+  ///
+  /// In hu, this message translates to:
+  /// **'Összes kategória'**
+  String get allCategories;
+
+  /// No description provided for @noTodosInCategory.
+  ///
+  /// In hu, this message translates to:
+  /// **'Ebben a kategóriában nincs teendő'**
+  String get noTodosInCategory;
+
+  /// No description provided for @deleteTodoTitle.
+  ///
+  /// In hu, this message translates to:
+  /// **'Biztos törlöd?'**
+  String get deleteTodoTitle;
+
+  /// No description provided for @deleteTodoMessage.
+  ///
+  /// In hu, this message translates to:
+  /// **'A(z) „{title}” teendő törlődik.'**
+  String deleteTodoMessage(String title);
+
+  /// No description provided for @todoDeleted.
+  ///
+  /// In hu, this message translates to:
+  /// **'A teendő törölve'**
+  String get todoDeleted;
+
+  /// No description provided for @todoDeleteError.
+  ///
+  /// In hu, this message translates to:
+  /// **'Hiba történt a teendő törlésekor'**
+  String get todoDeleteError;
+
+  /// No description provided for @todoRestored.
+  ///
+  /// In hu, this message translates to:
+  /// **'A teendő visszaállítva'**
+  String get todoRestored;
+
+  /// No description provided for @todoRestoreError.
+  ///
+  /// In hu, this message translates to:
+  /// **'Hiba történt a teendő visszaállításakor'**
+  String get todoRestoreError;
+
+  /// No description provided for @todoUpdateError.
+  ///
+  /// In hu, this message translates to:
+  /// **'Hiba történt a teendő módosításakor'**
+  String get todoUpdateError;
 
   /// No description provided for @todoListEmpty.
   ///
@@ -236,17 +422,11 @@ abstract class AppLocalizations {
   /// **'A lista üres'**
   String get todoListEmpty;
 
-  /// No description provided for @addTodo.
+  /// No description provided for @loadError.
   ///
   /// In hu, this message translates to:
-  /// **'Új teendő'**
-  String get addTodo;
-
-  /// No description provided for @insert.
-  ///
-  /// In hu, this message translates to:
-  /// **'Hozzáadás'**
-  String get insert;
+  /// **'Hiba történt a betöltéskor'**
+  String get loadError;
 
   /// No description provided for @quizTitle.
   ///

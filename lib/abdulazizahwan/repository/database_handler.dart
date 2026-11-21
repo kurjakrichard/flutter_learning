@@ -1,80 +1,75 @@
 import 'dart:async';
-import 'package:sqflite_common/utils/utils.dart' show firstIntValue;
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import '../models/category.dart';
+import '../models/todo.dart';
+import 'category_table.dart';
 import 'database_connection.dart';
+import 'todo_table.dart';
 
 class DatabaseHandler {
-  DatabaseConnection? _databaseConnection;
-
-  Map table = {
-    'tableName': 'categories',
-    'colId': 'id',
-    'colName': 'name',
-    'colDescription': 'description'
-  };
-
-  DatabaseHandler() {
-    _databaseConnection = DatabaseConnection();
-  }
+  final DatabaseConnection _databaseConnection = DatabaseConnection();
 
   static Database? _database;
 
-  Future<Database>? get database async {
-    if (_database == null) {
-      _database = await _databaseConnection!.initializeDB();
-      return _database!;
-    }
-    return _database!;
+  Future<Database> get database async {
+    return _database ??= await _databaseConnection.initializeDB();
   }
 
-  // Fetch Operation: Get all data from database
-  Future<List<Map<String, dynamic>>> getData(String table, String order) async {
-    Database? db = await database;
-    //var result = await db.rawQuery('SELECT * FROM ${table['tableName']} order by ${table['colPriority']} ASC');
-    var result = await db!.query(table, orderBy: order);
-    return result;
+  // Fetch Operation: Get all categories, ordered by the given column
+  Future<List<Category>> getCategoryList(
+      {CategoryColumn orderBy = CategoryColumn.name}) async {
+    final db = await database;
+    final rows = await db.query(categoryTableName, orderBy: orderBy.column);
+    return rows.map(Category.fromMap).toList();
   }
 
   // Insert Operation: Insert new record to database
-  Future<int> insert(String table, Map<String, dynamic> category) async {
-    Database? db = await database;
-    return await db!.insert(table, category);
+  Future<int> insert(Category category) async {
+    final db = await database;
+    return db.insert(categoryTableName, category.toMap());
   }
 
   // Update Operation: Update record in the database
-  Future<int> update(String tableName, Category category) async {
-    Database? db = await database;
-    int result = await db!.update(tableName, category.toMap(),
-        where: '${table['colId']} = ?', whereArgs: [category.id]);
-    return result;
+  Future<int> update(Category category) async {
+    final db = await database;
+    return db.update(categoryTableName, category.toMap(),
+        where: '${CategoryColumn.id.column} = ?', whereArgs: [category.id]);
   }
 
   // Delete Operation: Delete record from database
   Future<int> delete(int id) async {
-    Database? db = await database;
-    int result =
-        await db!.delete(table['tableName'], where: 'id = ?', whereArgs: [id]);
-    return result;
+    final db = await database;
+    return db.delete(categoryTableName,
+        where: '${CategoryColumn.id.column} = ?', whereArgs: [id]);
   }
 
-  // Get the numbers of the records in database
-  Future<int> getCount() async {
-    Database? db = await database;
-    List<Map<String, dynamic>> records =
-        await db!.rawQuery('SELECT COUNT (*) FROM ${table['tableName']}');
-    int result = firstIntValue(records) ?? 0;
-    return result;
+  // Fetch Operation: Get all todos, by date (todos without a date last),
+  // then in the order they were added
+  Future<List<Todo>> getTodoList() async {
+    final db = await database;
+    final date = TodoColumn.todoDate.column;
+    final rows = await db.query(todoTableName,
+        orderBy: '$date IS NULL, $date, ${TodoColumn.id.column}');
+    return rows.map(Todo.fromMap).toList();
   }
 
-  // Get the MapList and convert it to NoteList
-  Future<List<Category>> getCategoryList(String table, String order) async {
-    List<Map<String, dynamic>> categoryMapList = await getData(table, order);
-    int count = categoryMapList.length;
-    List<Category> categoryList = <Category>[];
-    for (int i = 0; i < count; i++) {
-      categoryList.add(Category.fromMapObject(categoryMapList[i]));
-    }
-    return categoryList;
+  // Insert Operation: Insert new todo, returns the new row id
+  Future<int> insertTodo(Todo todo) async {
+    final db = await database;
+    return db.insert(todoTableName, todo.toMap());
+  }
+
+  // Update Operation: Update todo, returns the number of changed rows
+  Future<int> updateTodo(Todo todo) async {
+    final db = await database;
+    return db.update(todoTableName, todo.toMap(),
+        where: '${TodoColumn.id.column} = ?', whereArgs: [todo.id]);
+  }
+
+  // Delete Operation: Delete todo, returns the number of deleted rows
+  Future<int> deleteTodo(int id) async {
+    final db = await database;
+    return db.delete(todoTableName,
+        where: '${TodoColumn.id.column} = ?', whereArgs: [id]);
   }
 }

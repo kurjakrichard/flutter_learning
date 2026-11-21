@@ -18,6 +18,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get home => 'Home';
 
   @override
+  String get mainMenu => 'Main menu';
+
+  @override
+  String get todos => 'Todos';
+
+  @override
   String get settings => 'Settings';
 
   @override
@@ -54,11 +60,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get status => 'Status';
 
   @override
-  String errorMessage(String error) {
-    return 'Error: $error';
-  }
-
-  @override
   String get categories => 'Categories';
 
   @override
@@ -74,16 +75,107 @@ class AppLocalizationsEn extends AppLocalizations {
   String get categoryHint => 'Write a category';
 
   @override
+  String get categoryRequired => 'Category name cannot be empty';
+
+  @override
+  String get categorySaved => 'Category saved successfully';
+
+  @override
+  String get categorySaveError => 'Error occurred while saving category';
+
+  @override
+  String get categoryDeleted => 'Category deleted';
+
+  @override
+  String get categoryDeleteError => 'Error occurred while deleting category';
+
+  @override
+  String get deleteCategoryTitle => 'Are you sure?';
+
+  @override
+  String deleteCategoryMessage(String name) {
+    return 'The category \"$name\" will be deleted.';
+  }
+
+  @override
+  String get undo => 'Undo';
+
+  @override
+  String get categoryRestored => 'Category restored';
+
+  @override
+  String get categoryRestoreError => 'Error occurred while restoring category';
+
+  @override
   String get descriptionHint => 'Write a description';
+
+  @override
+  String get titleHint => 'Write a title';
+
+  @override
+  String get dateHint => 'Pick a date';
+
+  @override
+  String get selectCategory => 'Select a category';
+
+  @override
+  String get noCategories => 'No categories yet, add one first';
+
+  @override
+  String get categoryNotSelected => 'Please select a category';
+
+  @override
+  String get titleRequired => 'Title cannot be empty';
+
+  @override
+  String get todoSaved => 'Todo saved successfully';
+
+  @override
+  String get todoSaveError => 'Error occurred while saving todo';
+
+  @override
+  String get newTodo => 'New todo';
+
+  @override
+  String get editTodo => 'Edit todo';
+
+  @override
+  String get filterByCategory => 'Filter by category';
+
+  @override
+  String get allCategories => 'All categories';
+
+  @override
+  String get noTodosInCategory => 'No todos in this category';
+
+  @override
+  String get deleteTodoTitle => 'Are you sure?';
+
+  @override
+  String deleteTodoMessage(String title) {
+    return 'The todo \"$title\" will be deleted.';
+  }
+
+  @override
+  String get todoDeleted => 'Todo deleted';
+
+  @override
+  String get todoDeleteError => 'Error occurred while deleting todo';
+
+  @override
+  String get todoRestored => 'Todo restored';
+
+  @override
+  String get todoRestoreError => 'Error occurred while restoring todo';
+
+  @override
+  String get todoUpdateError => 'Error occurred while updating todo';
 
   @override
   String get todoListEmpty => 'List has no data';
 
   @override
-  String get addTodo => 'Add Todo';
-
-  @override
-  String get insert => 'Insert';
+  String get loadError => 'Error occurred while loading';
 
   @override
   String get quizTitle => 'First app';

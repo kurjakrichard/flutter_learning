@@ -1,15 +1,15 @@
 {
   "@@locale": "en",
-
   "appTitle": "Flutter Learning",
   "menuTitle": "Flutter Learning Menu",
   "home": "Home",
+  "mainMenu": "Main menu",
+  "todos": "Todos",
   "settings": "Settings",
   "language": "Language",
   "languageSystem": "System default",
   "languageHungarian": "Magyar",
   "languageEnglish": "English",
-
   "save": "Save",
   "cancel": "Cancel",
   "delete": "Delete",
@@ -17,19 +17,58 @@
   "description": "Description",
   "date": "Date",
   "status": "Status",
-  "errorMessage": "Error: {error}",
-
   "categories": "Categories",
   "newCategory": "New category",
   "editCategory": "Edit category",
   "category": "Category",
   "categoryHint": "Write a category",
+  "categoryRequired": "Category name cannot be empty",
+  "categorySaved": "Category saved successfully",
+  "categorySaveError": "Error occurred while saving category",
+  "categoryDeleted": "Category deleted",
+  "categoryDeleteError": "Error occurred while deleting category",
+  "deleteCategoryTitle": "Are you sure?",
+  "deleteCategoryMessage": "The category \"{name}\" will be deleted.",
+  "@deleteCategoryMessage": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "undo": "Undo",
+  "categoryRestored": "Category restored",
+  "categoryRestoreError": "Error occurred while restoring category",
   "descriptionHint": "Write a description",
-
+  "titleHint": "Write a title",
+  "dateHint": "Pick a date",
+  "selectCategory": "Select a category",
+  "noCategories": "No categories yet, add one first",
+  "categoryNotSelected": "Please select a category",
+  "titleRequired": "Title cannot be empty",
+  "todoSaved": "Todo saved successfully",
+  "todoSaveError": "Error occurred while saving todo",
+  "newTodo": "New todo",
+  "editTodo": "Edit todo",
+  "filterByCategory": "Filter by category",
+  "allCategories": "All categories",
+  "noTodosInCategory": "No todos in this category",
+  "deleteTodoTitle": "Are you sure?",
+  "deleteTodoMessage": "The todo \"{title}\" will be deleted.",
+  "@deleteTodoMessage": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "todoDeleted": "Todo deleted",
+  "todoDeleteError": "Error occurred while deleting todo",
+  "todoRestored": "Todo restored",
+  "todoRestoreError": "Error occurred while restoring todo",
+  "todoUpdateError": "Error occurred while updating todo",
   "todoListEmpty": "List has no data",
-  "addTodo": "Add Todo",
-  "insert": "Insert",
-
+  "loadError": "Error occurred while loading",
   "quizTitle": "First app",
   "quizFinished": "No more questions!",
   "quizQuestionWho": "Who are you?",
@@ -42,7 +81,6 @@
   "quizAnswerShop": "in a shop",
   "quizAnswerWork": "at work",
   "quizAnswerBalaton": "at Lake Balaton",
-
   "button": "Button",
   "goodFlight": "Have a good flight",
   "landscape": "Landscape",
@@ -53,12 +91,10 @@
   "statefulExample": "Stateful app example",
   "bestCity": "Your best city is {city}",
   "bestCountry": "Your best country is {country}",
-
   "currencyForint": "Forint",
   "currencyDollar": "Dollar",
   "currencyEuro": "Euro",
   "currencyOther": "Other",
-
   "interestCalculator": "Interest calculator",
   "investment": "Principal",
   "investmentHint": "Enter the principal amount, e.g. 1,000,000",
@@ -70,7 +106,6 @@
   "reset": "Reset",
   "enterNumber": "Please enter a number!",
   "interestResult": "After {term} years your investment will be worth {amount} {currency}.",
-
   "notes": "Notes",
   "addNote": "Add note",
   "editNote": "Edit note",

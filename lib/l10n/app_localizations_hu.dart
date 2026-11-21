@@ -18,6 +18,12 @@ class AppLocalizationsHu extends AppLocalizations {
   String get home => 'Kezdőlap';
 
   @override
+  String get mainMenu => 'Főmenü';
+
+  @override
+  String get todos => 'Teendők';
+
+  @override
   String get settings => 'Beállítások';
 
   @override
@@ -54,11 +60,6 @@ class AppLocalizationsHu extends AppLocalizations {
   String get status => 'Állapot';
 
   @override
-  String errorMessage(String error) {
-    return 'Hiba: $error';
-  }
-
-  @override
   String get categories => 'Kategóriák';
 
   @override
@@ -74,16 +75,108 @@ class AppLocalizationsHu extends AppLocalizations {
   String get categoryHint => 'Írj be egy kategóriát';
 
   @override
+  String get categoryRequired => 'A kategória neve nem lehet üres';
+
+  @override
+  String get categorySaved => 'A kategória mentése sikerült';
+
+  @override
+  String get categorySaveError => 'Hiba történt a kategória mentésekor';
+
+  @override
+  String get categoryDeleted => 'A kategória törölve';
+
+  @override
+  String get categoryDeleteError => 'Hiba történt a kategória törlésekor';
+
+  @override
+  String get deleteCategoryTitle => 'Biztos törlöd?';
+
+  @override
+  String deleteCategoryMessage(String name) {
+    return 'A(z) „$name” kategória törlődik.';
+  }
+
+  @override
+  String get undo => 'Visszavonás';
+
+  @override
+  String get categoryRestored => 'A kategória visszaállítva';
+
+  @override
+  String get categoryRestoreError =>
+      'Hiba történt a kategória visszaállításakor';
+
+  @override
   String get descriptionHint => 'Írj be egy leírást';
+
+  @override
+  String get titleHint => 'Írj be egy címet';
+
+  @override
+  String get dateHint => 'Válassz egy dátumot';
+
+  @override
+  String get selectCategory => 'Válassz kategóriát';
+
+  @override
+  String get noCategories => 'Még nincs kategória, előbb vegyél fel egyet';
+
+  @override
+  String get categoryNotSelected => 'Válassz egy kategóriát';
+
+  @override
+  String get titleRequired => 'A cím nem lehet üres';
+
+  @override
+  String get todoSaved => 'A teendő mentése sikerült';
+
+  @override
+  String get todoSaveError => 'Hiba történt a teendő mentésekor';
+
+  @override
+  String get newTodo => 'Új teendő';
+
+  @override
+  String get editTodo => 'Teendő szerkesztése';
+
+  @override
+  String get filterByCategory => 'Szűrés kategóriára';
+
+  @override
+  String get allCategories => 'Összes kategória';
+
+  @override
+  String get noTodosInCategory => 'Ebben a kategóriában nincs teendő';
+
+  @override
+  String get deleteTodoTitle => 'Biztos törlöd?';
+
+  @override
+  String deleteTodoMessage(String title) {
+    return 'A(z) „$title” teendő törlődik.';
+  }
+
+  @override
+  String get todoDeleted => 'A teendő törölve';
+
+  @override
+  String get todoDeleteError => 'Hiba történt a teendő törlésekor';
+
+  @override
+  String get todoRestored => 'A teendő visszaállítva';
+
+  @override
+  String get todoRestoreError => 'Hiba történt a teendő visszaállításakor';
+
+  @override
+  String get todoUpdateError => 'Hiba történt a teendő módosításakor';
 
   @override
   String get todoListEmpty => 'A lista üres';
 
   @override
-  String get addTodo => 'Új teendő';
-
-  @override
-  String get insert => 'Hozzáadás';
+  String get loadError => 'Hiba történt a betöltéskor';
 
   @override
   String get quizTitle => 'Első program';
