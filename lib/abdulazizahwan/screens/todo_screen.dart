@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:intl/intl.dart';
 import 'package:flutter_learning/l10n/app_localizations.dart';
+import '../extensions/date_time_extensions.dart';
 import '../models/todo.dart';
 import '../providers/categories_provider.dart';
 import '../providers/todos_provider.dart';
@@ -74,8 +74,7 @@ class _TodoScreenState extends ConsumerState<TodoScreen> {
     // The date text needs the locale, which isn't available in initState
     final date = _selectedDate;
     if (date != null) {
-      final locale = Localizations.localeOf(context).toString();
-      _dateController.text = DateFormat.yMMMd(locale).format(date);
+      _dateController.text = date.toLocalizedString(context);
     }
   }
 
@@ -99,10 +98,9 @@ class _TodoScreenState extends ConsumerState<TodoScreen> {
     );
     if (picked == null || !mounted) return;
 
-    final locale = Localizations.localeOf(context).toString();
     setState(() {
       _selectedDate = picked;
-      _dateController.text = DateFormat.yMMMd(locale).format(picked);
+      _dateController.text = picked.toLocalizedString(context);
     });
   }
 

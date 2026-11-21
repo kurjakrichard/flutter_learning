@@ -1,3 +1,4 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/l10n/app_localizations.dart';
 
@@ -8,8 +9,18 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          debugPrint('clicked');
+        onPressed: () async {
+          try {
+            final files = await FilePicker.pickFiles();
+            // Cancel returns an empty list, not null: .first would throw
+            if (files.isEmpty) {
+              debugPrint('File picking canceled');
+              return;
+            }
+            debugPrint('Selected file: ${files.first.name}');
+          } catch (error) {
+            debugPrint('Error picking file: $error');
+          }
         },
         child: const Icon(Icons.add),
       ),
@@ -71,7 +82,8 @@ class Home extends StatelessWidget {
                         ..pop()
                         ..pop();
                     },
-                    child: Text(MaterialLocalizations.of(context).okButtonLabel),
+                    child:
+                        Text(MaterialLocalizations.of(context).okButtonLabel),
                   ),
                 ],
               );

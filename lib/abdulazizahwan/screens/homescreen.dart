@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:intl/intl.dart';
 import 'package:flutter_learning/l10n/app_localizations.dart';
 import 'package:flutter_learning/settings/settings_tile.dart';
 import 'categories_screen.dart';
 import 'todo_screen.dart';
+import '../extensions/date_time_extensions.dart';
 import '../models/todo.dart';
 import '../providers/categories_provider.dart';
 import '../providers/todos_provider.dart';
@@ -111,9 +111,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       return Center(child: Text(l10n.noTodosInCategory));
     }
 
-    final locale = Localizations.localeOf(context).toString();
-    final dateFormat = DateFormat.yMMMd(locale);
-
     return ListView.builder(
       // Bottom padding so the FAB doesn't cover the last item
       padding: const EdgeInsets.only(top: 4, bottom: 88),
@@ -124,7 +121,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         // Category name and date in one line, e.g. "Munka · 2026. nov. 21."
         final details = [
           categoryNames[todo.categoryId] ?? '',
-          if (date != null) dateFormat.format(date),
+          if (date != null) date.toLocalizedString(context),
         ].where((part) => part.isNotEmpty).join(' · ');
 
         return Card(
